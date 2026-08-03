@@ -19,6 +19,6 @@ public:
             return "Alice";
         if (dp[0] < 0)
             return "Bob";
-        return "Tie";\
+        return "Tie";
     }
 };
