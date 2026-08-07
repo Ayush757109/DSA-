@@ -12,7 +12,7 @@ public:
 
             // Left half is sorted
             if (nums[st] <= nums[mid]) {
-                if (nums[st] <= target && target < nums[mid]) {
+                if (nums[st] <= target && target <= nums[mid]) {
                     end = mid - 1;
                 } else {
                     st = mid + 1;
