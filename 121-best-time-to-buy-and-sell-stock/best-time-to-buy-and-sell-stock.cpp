@@ -4,14 +4,15 @@ public:
         int minPrice = INT_MAX;
         int maxProfit = 0;
 
-        for (int price : prices) {
-            // Best price to buy before today
-            minPrice = min(minPrice, price);
+        for (int i = 0; i < prices.size(); i++) {
+            minPrice = min(minPrice, prices[i]);
 
-            // Profit if we sell today
-            maxProfit = max(maxProfit, price - minPrice);
+            int profit = prices[i] - minPrice;
+
+            maxProfit = max(maxProfit, profit);
         }
 
         return maxProfit;
     }
 };
+   
