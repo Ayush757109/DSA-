@@ -11,8 +11,8 @@ class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if(!root) return NULL;
-        if(root==p) return p;
-        if(root==q) return q;
+        if(root->val == p->val) return p;
+        if(root->val ==q->val) return q;
         
     
          TreeNode* leftAns = lowestCommonAncestor(root->left , p,q);
